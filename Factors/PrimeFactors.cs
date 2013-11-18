@@ -8,11 +8,19 @@ namespace Factors
 {
     public class PrimeFactors
     {
-        public static List<int> Primes(int p)
+        public static List<int> Primes(int n)
         {
             var primes = new List<int>();
-            if(p > 1)
-                primes.Add(p);
+            if (n > 1)
+            {
+                if (n%2 == 0)
+                {
+                    primes.Add(2);
+                    n /= 2;
+                }
+                if(n > 1)
+                    primes.Add(n);
+            }
             return primes;
         }
     }

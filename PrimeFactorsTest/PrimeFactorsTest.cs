@@ -17,7 +17,21 @@ namespace PrimeFactorsTest
         [Fact]
         public void TestTwo()
         {
-            PrimeFactors.Primes(2).Should().Equal(new List<int> { 2 });
+            PrimeFactors.Primes(2).Should().Equal(new List<int> {2});
         }
+
+        [Fact]
+        public void TestThree()
+        {
+            PrimeFactors.Primes(3).Should().Equal(new List<int> {3});
+        }
+
+        [Fact]
+        public void TestFour()
+        {
+            PrimeFactors.Primes(4).Should().Equal(new List<int> {2, 2});
+        }
+
+        
     }
 }
