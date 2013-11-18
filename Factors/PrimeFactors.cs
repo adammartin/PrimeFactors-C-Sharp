@@ -11,16 +11,19 @@ namespace Factors
         public static List<int> Primes(int n)
         {
             var primes = new List<int>();
-            if (n > 1)
+            int candidate = 2;
+            while (n > 1)
             {
-                if (n%2 == 0)
+                while (n%candidate == 0)
                 {
-                    primes.Add(2);
-                    n /= 2;
+                    primes.Add(candidate);
+                    n /= candidate;
                 }
-                if(n > 1)
-                    primes.Add(n);
+                candidate++;
             }
+            if (n > 1)
+                primes.Add(n);
+
             return primes;
         }
     }

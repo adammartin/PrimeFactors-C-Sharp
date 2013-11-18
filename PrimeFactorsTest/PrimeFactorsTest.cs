@@ -32,6 +32,22 @@ namespace PrimeFactorsTest
             PrimeFactors.Primes(4).Should().Equal(new List<int> {2, 2});
         }
 
-        
+        [Fact]
+        public void TestSix()
+        {
+            PrimeFactors.Primes(6).Should().Equal(new List<int> {2, 3});
+        }
+
+        [Fact]
+        public void TestEight()
+        {
+            PrimeFactors.Primes(8).Should().Equal(new List<int> {2, 2, 2});
+        }
+
+        [Fact]
+        public void TestNine()
+        {
+            PrimeFactors.Primes(9).Should().Equal(new List<int> {3, 3});
+        }
     }
 }
