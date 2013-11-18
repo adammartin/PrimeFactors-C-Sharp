@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using FluentAssertions;
 using Xunit;
 using Factors;
 using System.Collections.Generic;
@@ -10,14 +11,13 @@ namespace PrimeFactorsTest
         [Fact]
         public void TestOne()
         {
-            Assert.Equal(0, PrimeFactors.Primes(1).Count);
+            PrimeFactors.Primes(1).Should().Equal(new List<int>());
         }
 
         [Fact]
         public void TestTwo()
         {
-            Assert.Equal(new List<int>{2}, PrimeFactors.Primes(2));
+            PrimeFactors.Primes(2).Should().Equal(new List<int> { 2 });
         }
-
     }
 }

@@ -10,7 +10,10 @@ namespace Factors
     {
         public static List<int> Primes(int p)
         {
-            return new List<int>();
+            var primes = new List<int>();
+            if(p > 1)
+                primes.Add(p);
+            return primes;
         }
     }
 }
